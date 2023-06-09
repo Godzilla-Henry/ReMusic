@@ -1,3 +1,4 @@
+/* Main ts */
 /* eslint-env node */
 
 /*
@@ -28,6 +29,7 @@ module.exports = configure(function (/* ctx */) {
     ],
 
     // https://v2.quasar.dev/quasar-cli-vite/quasar-config-js#css
+    // 預設拉的位置是 /src/css
     css: [
       'app.scss'
     ],
@@ -61,7 +63,7 @@ module.exports = configure(function (/* ctx */) {
       // rebuildCache: true, // rebuilds Vite/linter/etc cache on startup
 
       // publicPath: '/',
-      // analyze: true,
+      // analyze: true, // 在你build時會運行 webpack-bundle-analyzer 工具
       // env: {},
       // rawDefine: {}
       // ignorePublicFolder: true,
@@ -89,26 +91,32 @@ module.exports = configure(function (/* ctx */) {
 
     // Full list of options: https://v2.quasar.dev/quasar-cli-vite/quasar-config-js#devServer
     devServer: {
-      // https: true
+      // https: true // 小提醒：這邊只有在dev時有用，之後輸出成網頁還是要依靠機器上的伺服器設定
+      // port: 8080,
       open: true // opens browser window automatically
     },
 
     // https://v2.quasar.dev/quasar-cli-vite/quasar-config-js#framework
+    // 放Quasar UI元件
     framework: {
       config: {},
 
       // iconSet: 'material-icons', // Quasar icon set
-      // lang: 'en-US', // Quasar language pack
+      lang: 'en-us', // Quasar language pack
 
       // For special cases outside of where the auto-import strategy can have an impact
       // (like functional components as one of the examples),
       // you can manually specify Quasar components/directives to be available everywhere:
       //
-      // components: [],
+      components: [
+        'QPageSticky',
+      ],
       // directives: [],
 
-      // Quasar plugins
-      plugins: []
+      // Quasar plugins - 放置原本在vue的main.js的plugins
+      plugins: [
+
+      ]
     },
 
     // animations: 'all', // --- includes all animations
