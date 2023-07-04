@@ -1,0 +1,20 @@
+<svg width="235" height="656" xmlns="http://www.w3.org/2000/svg" version="1.1" xml:space="preserve">
+    <g>
+    <title>Layer 1</title>
+    <rect transform="rotate(6.57335 120.58 307.243)" filter="url(#svg_13_blur)" stroke="#000000" id="svg_13" height="446.45089" width="34.66657" y="84.01777" x="103.24717" stroke-width="10" fill="#000000"/>
+    <path filter="url(#svg_12_blur)" stroke="#000000" id="svg_12" d="m149.12944,160.99959c-44.93543,0 -81.33313,-34.90598 -81.33313,-77.99979c0,-43.0938 36.3977,-77.9998 81.33313,-77.9998c44.93541,0 81.33311,34.906 81.33311,77.9998c0,43.09381 -36.3977,77.99979 -81.33311,77.99979z" opacity="undefined" stroke-width="10" fill="#fff"/>
+    <path stroke="#000000" id="svg_11" d="m149.12944,160.99959c-44.93543,0 -81.33313,-34.90598 -81.33313,-77.99979c0,-43.0938 36.3977,-77.99979 81.33313,-77.99979c44.93542,0 81.33311,34.90599 81.33311,77.99979c0,43.09381 -36.3977,77.99979 -81.33311,77.99979z" opacity="undefined" stroke-width="10" fill="#fff"/>
+    <path id="svg_5" d="m148.46277,140.99964c-33.5174,0 -60.6665,-26.25407 -60.6665,-58.66651c0,-32.41244 27.1491,-58.66651 60.6665,-58.66651c33.5174,0 60.6665,26.25407 60.6665,58.66651c0,32.41244 -27.1491,58.66651 -60.6665,58.66651z" opacity="undefined" stroke-width="10" stroke="#000000" fill="#000000"/>
+    <rect transform="rotate(6.57335 120.58 307.243)" stroke="#000000" id="svg_7" height="446.45089" width="34.66657" y="84.01777" x="103.24717" stroke-width="10" fill="#000000"/>
+    <rect transform="rotate(32.3242 71.8112 576.695)" rx="10" stroke="#000000" id="svg_9" height="131.99964" width="83.67962" y="510.69541" x="29.97134" stroke-width="10" fill="#000000"/>
+    <rect transform="rotate(31.9506 111.096 606.397)" stroke="#000000" rx="10" id="svg_10" height="8.39702" width="36.63044" y="602.19829" x="92.78078" stroke-width="10" fill="#000000"/>
+    </g>
+    <defs>
+    <filter height="200%" width="200%" y="-50%" x="-50%" id="svg_12_blur">
+    <feGaussianBlur stdDeviation="10" in="SourceGraphic"/>
+    </filter>
+    <filter height="200%" width="200%" y="-50%" x="-50%" id="svg_13_blur">
+    <feGaussianBlur stdDeviation="5" in="SourceGraphic"/>
+    </filter>
+    </defs>
+</svg>
