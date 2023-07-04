@@ -13,6 +13,10 @@
 const { configure } = require('quasar/wrappers');
 const path = require('path');
 
+function resolve(dir) {
+  return path.join(__dirname, '.', dir)
+}
+
 module.exports = configure(function (/* ctx */) {
   return {
     
@@ -56,6 +60,9 @@ module.exports = configure(function (/* ctx */) {
       },
 
       vueRouterMode: 'hash', // available values: 'hash', 'history'
+      alias: {
+        src: path.join(__dirname, './src'),
+      },
       // vueRouterBase,
       // vueDevtools,
       // vueOptionsAPI: false,
@@ -86,7 +93,7 @@ module.exports = configure(function (/* ctx */) {
           // you need to set i18n resource including paths !
           include: path.resolve(__dirname, './src/i18n/**')
         }]
-      ]
+      ],
     },
 
     // Full list of options: https://v2.quasar.dev/quasar-cli-vite/quasar-config-js#devServer
@@ -115,7 +122,6 @@ module.exports = configure(function (/* ctx */) {
 
       // Quasar plugins - 放置原本在vue的main.js的plugins
       plugins: [
-
       ]
     },
 
