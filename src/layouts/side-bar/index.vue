@@ -13,11 +13,11 @@ q-drawer(
         //- Logo
         #logo
             q-img.logoImg(
-                src="https://cdn.pixabay.com/photo/2019/08/11/18/27/icon-4399630_1280.png"
+                :src="logo"
                 spinner-color="white"
                 :class="{mini: isMini}"
             )
-            h3(:class="{hide: isMini}") ReMusic
+            h3(:class="{hide: isMini}") Music Dog
             q-btn.absolute(style='top: 18px; right: 10px;' :class="{hide: !isMobile}")(
                 flat
                 color='grey-6' 
@@ -87,6 +87,7 @@ q-drawer(
 import { computed, defineComponent, onMounted, ref, watch } from 'vue';
 import { useGlobal } from 'src/stores';
 import { useQuasar } from 'quasar';
+import logo from 'src/assets/logo.svg';
 
 export default defineComponent({
     setup () {
@@ -116,6 +117,7 @@ export default defineComponent({
             isMobile,
             globalStore,
             close,
+            logo,
         }
     }
 })
