@@ -66,7 +66,7 @@ q-drawer(
                     q-icon(name='help')
                 q-item-section Help
     
-    .q-mini-drawer-hide.absolute(style='top: 50%; right: -17px')
+    .q-mini-drawer-hide.absolute(style='bottom: 5%; right: 17px;')
         q-btn(
             dense round unelevated 
             color='grey-6' 

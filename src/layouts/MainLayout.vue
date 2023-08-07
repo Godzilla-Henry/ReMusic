@@ -1,36 +1,53 @@
 <template lang="pug">
-q-layout(view='lhh Lpr lFf')
+q-layout(view='lHh Lpr fFf')
   //- Header
-  headerBar
+  HeaderBar.fixed
 
   //- SideBar
-  sideBar
+  SideBar
   
   //- Page Wrapper
-  q-page-container
+  q-page-container.relative-position
     router-view
+
+  //- Footer
+  Footer.fixed(v-show="showFooter")
 </template>
 
 <script lang="ts">
 import { defineComponent, onMounted, ref } from 'vue';
+import eventBus from 'src/Utils/useEventBus';
 //- Components
-import headerBar from './header-bar/index.vue';
-import sideBar from './side-bar/index.vue';
+import HeaderBar from './header-bar/index.vue';
+import SideBar from './side-bar/index.vue';
+import Footer from './footer-player/index.vue';
 
 export default defineComponent({
   name: 'MainLayout',
 
   components: {
-    headerBar,
-    sideBar,
+    HeaderBar,
+    SideBar,
+    Footer,
   },
 
   setup () {
-    const leftDrawerOpen = ref(false);
+    const showFooter = ref(false);
+
+    onMounted(() => {
+      eventBus.on('openPlayer', () => {
+        showFooter.value = true;
+      });
+    });
+
     return {
-      leftDrawerOpen,
+      showFooter,
     }
   }
 });
 </script>
+
+<style lang="scss">
+.fixed{position: fixed;}
+</style>
 

@@ -3,31 +3,39 @@
  */
 
 import { defineStore } from 'pinia'
-import { type RouteLocationMatched, type RouteMeta } from 'vue-router';
 
 /** Config State */
 interface IConfigState {
-    drawer: boolean;
+    //- 折疊 SideBar
+    drawer: boolean,
+    //- 開啟 PlayerView
+    expand: boolean,
 }
 
 export default defineStore(
     'global', 
     {
         state: (): IConfigState => ({
-             // 折疊 SideBar
             drawer: true,
+            expand: false,
         }),
         getters: {
             getDrawer: (state): boolean => state.drawer,
+            getExpand: (state): boolean => state.expand,
         },
         actions: {
-            // 控制折疊
+            // drawer
             act_toggleDrawer(): void{
                 this.drawer = !this.drawer;
             },
             act_setDrawer(data: boolean){
                 this.drawer = data;
             },
+            // expand
+            act_toggleExpand(): void{
+                this.expand = !this.expand;
+            },
+
         },
         // Data persistence destination
         // persist: {

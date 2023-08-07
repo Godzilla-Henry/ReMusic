@@ -15,12 +15,8 @@ q-header(elevated)
         q-separator.q-mx-md(color="grey" inset vertical)
         q-btn.q-mr-md(flat round dense icon='light_mode' size="12px")
         q-btn.q-mr-md(flat round dense icon='notifications' size="12px")
-        q-chip(size="18px")
-            q-avatar(size="30px")
-                img(src='https://www.poaipets.com.tw/wp-content/uploads/2021/03/%E5%89%96%E6%9E%90%E7%8B%97%E7%8B%97%E5%B8%B8%E8%A6%8B%E7%96%BE%E7%97%85.jpg')
-            q-separator.q-mr-sm(color="grey" inset vertical)
-            span Henry
-        
+        q-avatar(size="30px")
+            img(src='https://www.poaipets.com.tw/wp-content/uploads/2021/03/%E5%89%96%E6%9E%90%E7%8B%97%E7%8B%97%E5%B8%B8%E8%A6%8B%E7%96%BE%E7%97%85.jpg')
 </template>
 
 <script lang="ts">
