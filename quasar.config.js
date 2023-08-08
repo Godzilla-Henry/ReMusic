@@ -94,6 +94,13 @@ module.exports = configure(function (/* ctx */) {
           include: path.resolve(__dirname, './src/i18n/**')
         }]
       ],
+
+      extendWebpack(cfg) {
+        // ...
+        if (ctx.prod && ctx.modeName === 'spa') {
+          cfg.output.publicPath = './' // 或者 '/your-repo-name/'，取决于您的设置
+        }
+      }
     },
 
     // Full list of options: https://v2.quasar.dev/quasar-cli-vite/quasar-config-js#devServer
