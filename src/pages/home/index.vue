@@ -199,10 +199,11 @@ export default defineComponent({
     height: calc(100vh - 108px - 50px);
     top: 0px;
     left: 0px;
-    opacity: 0;
+    display: none;
     transform: translateY(100%);
 
     &.expand{
+        display: block;
         /* 動畫 */
         animation-name: slideInAnimation;
         animation-duration: 0.5s;
