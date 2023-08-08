@@ -17,7 +17,7 @@ function resolve(dir) {
   return path.join(__dirname, '.', dir)
 }
 
-module.exports = configure(function (/* ctx */) {
+module.exports = configure(function (ctx) {
   return {
     
 
